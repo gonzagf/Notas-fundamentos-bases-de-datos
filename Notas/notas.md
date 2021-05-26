@@ -1169,6 +1169,21 @@ Los diagramas de Venn son círculos que se tocan en algún punto para ver dónde
 
 ![teoria_conjuntos_sentencias](src/teoria_conjuntos_sentencias.jpg)
 
+JOIN - Teoría de Conjuntos
+Diferencia:
+LEFT Join (Con la intersección): Trae todo los datos de la tabla A, que estén o no estén de la tabla B.
+LEFT JOIN (Sin la intersección): Trae todo los datos de la tabla A, que no estén en la tabla B.
+RRIGHT JOIN(Con la intersección): Trae todo los datos de la tabla B, que estén o no estén de la tabla A.
+RIGHT JOIN(Sin la intersección):Trae todo los datos de la tabla B, que no estén en la tabla A.
+.
+2. Intersección:
+
+INNER JOIN: Solo arrastra valores que estén tanto en la Tabla A como en la Tabla B. Es la mas usada.
+.
+Unión y Diferencia Simétrica__
+UNION: Trae todo de la tabla A y Tabla B. (Unión)
+OUTER JOIN: Trae todo de la tabla A y B; pero solo información que no guarde relación una tabla con la otra. (Diferencia Simétrica)
+
 ### Clase 32 Utilizando la sentencia FROM
 
 Comandos de la clase
