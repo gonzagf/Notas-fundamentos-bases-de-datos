@@ -1818,58 +1818,69 @@ Para datos historicos, queries complejos usar bigquery optimizado para datawhere
 
 Para datos del estado de nuestra aplicacion usa colecciones con mongo o firebase.
 
-Puedes usar dos bases de datos en un mismo proyecto, guardar datos de mongo, convertirlos pasarlos a bigquery y hacer analisis sobre ellos.
+Puedes usar dos bases de datos en un mismo proyecto, guardar datos de mongo, convertirlos pasarlos a bigquery y hacer analisis sobre ellos. depende de las necesidades que tenga mi proyecto.
 
 ### Clase 50 Big Data
 
-**Big Data** es un concepto que nace de la necesidad de manejar grandes cantidades de datos. La tendencia comenzó con compañías como **YouTube** al tener la necesidad de guardar y consultar mucha información de manera rápida.
+**Big Data** es un concepto que nace de la necesidad de manejar grandes cantidades de datos(MUCHOS Y EN MUY POCO TIEMPO, ej videos cada segundo). La tendencia comenzó con compañías como **YouTube** al tener la necesidad de guardar y consultar mucha información de manera rápida.
 
-Es un gran movimiento que consiste en el uso de diferentes tipos de bases de datos.
+La otra asepcion que tiene es que s un gran movimiento que consiste en el uso de diferentes tipos de bases de datos para hacer un analisis con estadistica y analitica para uso de bussines inteligence. (el profesor no cree que sea la mejor forma de nombrarlo)
 
-Un ejemplo  es cassandra pero tiene ciertos tipos de desventaja, su ventaja manejar datos masivos a gran velocidad
+Un ejemplo  es cassandra (la usa facebook) pero tiene ciertos tipos de desventaja, su ventaja manejar datos masivos a gran velocidad.
 
 ### Clase 51 Data warehouse
 
+warehouse: grandes depositos donde las empresas guardan sus insumos o productos terminados.
+
 **Data Warehouse** trata de guardar cantidades masivas de datos para la posteridad. Allí se guarda todo lo que no está viviendo en la aplicación pero es necesario tenerlo.
 Debe servir para guardar datos por un largo periodo de tiempo y estos datos se deben poder usar para poder encontrar cuestiones interesantes para el negocio.
+Por ejemplo los posts de facebook, es info que se guarda históricamente pero no es necesario que estén en la base de datos principal. La diferencia con big data es que estos datos se guardan mas para la historia, no tienen un uso diario.
+Normalmente todo lo que se considera "archivo muerto" pero que tampoco se puede eliminar usualmente se envia a la data warehouse.
 
-Google usa **BigTable**, usa una sola tabla, pero no sirve tanto para hacer consultas
+Google usa **BigTable**, esta db tiene una particularidad: usa una sola tabla, una gran tabla, guarda muchisimos datos pero no sirve tanto para hacer consultas.
 
 **Data Warehouse** es un archivo historico, archivo muerto, en  otra base de datos. Sirve para dos actividades principales:
 
 - Guarda una gran cantidad de datos de forma "eterna".
 - Poder extraer los datos para hacer analitica.
 
-BigQuery es muy utilizado
+BigQuery es muy utilizado.
 
 ### Clase 52 Data mining
 
-El **Data Mining** se dedica a minar datos, a extraerlos de donde sea que estén (archivos muertos, base de datos actual, etc…) y hacer sentido de ellos para darles un uso.
+El **Data Mining** es una disciplina que se dedica a minar datos. Muchas veces las empresas guardan y guardan datos sin mucho orden en general y toca "picar piedra" y de alli viene data mining, se dedica a extraer los datos de donde sea que estén (archivos muertos, base de datos actual, etc…) y hacer sentido de ellos para darles un uso.
 
 ### Clase 53 ETL
 
-**ETL** son las siglas de Extract, Transform, Load (extraer, transformar y cargar). Se trata de tomar datos de archivos muertos y convertirlos en algo que sea de utilidad para el negocio.
-También ayuda a tomar los datos vivos de la aplicación, transformarlos y guardarlos en un data warehouse periódicamente.
+**ETL** son las siglas de Extract, Transform and Load (extraer, transformar y cargar). Se trata de tomar datos de archivos muertos(datos sin orden ni cohesión) y convertirlos en algo que sea de utilidad para el negocio.
+También ayuda a tomar los datos vivos de la aplicación, transformarlos y guardarlos en un data warehouse periódicamente.(toma datos del tiempo real, periodicamente voy a transformarlos y cargarlos para que estén listos para ser trabajados)
 
 ### Clase 54 Business intelligence
 
-**Business Intelligence** es una parte muy importante de las carreras de datos ya que es el punto final del manejo de estos. Su razón de ser es tener la información lista, clara y que tenga todos los elementos para tomar decisiones en una empresa.
-Es necesario tener una buena sensibilidad por entender el negocio, sus necesidades y la información que puede llevar a tomar decisiones en el momento adecuado al momento de realizar business intelligence.
+**Business Intelligence** es una parte muy importante de las carreras de datos ya que es el punto final del manejo de estos. Su razón de ser es intentar tener la información lista, clara, oportuna y que tenga todos los elementos para tomar decisiones en una empresa.
+Es necesario tener una buena sensibilidad por entender el negocio, sus necesidades y la información que puede llevar a tomar decisiones en el momento adecuado al momento de realizar business intelligence. ej: como se han comportado historicamente las ventas? tienen estacionalidad? como es nuestro usuario?
+que tipo de audiencia tenemos? tienen ocupaciones? que les interesa? que uso se le da a nuestra aplicacion? debemos intentar entender los patrones.
+BI se vale de todas las tecnicas vistas antes, ETL, data mining, data warehouse y big data, para llegar a algo que puedan presentar en forma de graficas, tablas de datos, dashboards. 
+Es una disciplina y un arte.
 
 ### Clase 55 Machine Learning
 
-**Machine Learning** tiene significados que varían. Es una serie de técnicas que involucran la inteligencia artificial y la detección de patrones.
-Machine learning para datos tiene un gran campo de acción y es un paso más allá del business intelligence.
-Nos ayuda a hacer modelos que encuentran patrones fortuitos encontrando correlaciones inesperadas.
+**Machine Learning** tiene significados que varían, depende de en que contexto lo hables. Es una serie de técnicas que involucran la inteligencia artificial y la detección de patrones.
+Machine learning para datos tiene un gran campo de acción y va un paso más allá del business intelligence.
+Nos ayuda a hacer modelos que encuentran patrones fortuitos encontrando correlaciones inesperadas. Intenta hacer modelos desde estos patrones fortuitos. 
+Big Query es utilizada en ML.
 
 **Tiene dos casos de uso particulares:**
 
-- Clasificación
-- Predicción
+- Clasificación: tiene que ver con tener un pool de datos masivo, procesarlo y recibir patrones que salgan de aquí. Le das un ejemplo, el modelo se entrena y luego de todos los datos te devuelve el patrón para el que está entrenado buscar.
+- Predicción: ayuda a la toma de decisiones. A partir de un modelo te permite predecir eventos futuros.
+
+Big Query tiene una opcion en la que podemos hacer machine learning.
 
 ### Clase 56 Data Science
 
-**Data Science** es aplicar todas las técnicas de procesamiento de datos. En su manera más pura tiene que ver con gente con un background de estadísticas y ciencias duras.
+**Data Science** es aplicar todas las técnicas de procesamiento de datos junto. En su manera más pura tiene que ver con gente con un background de estadísticas y ciencias duras y matematicas.
+Hoy se encuentra muy complementada con toda esta parte de datos.
 
 ### Clase 57 Por que aprender bases de datos hoy
 
